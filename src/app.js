@@ -39,7 +39,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Page',
         name: 'Asa Furman',
-        helpMessage: 'Provide a location and get'
+        helpMessage: 'Provide location, get forecast'
     })
 })
 
