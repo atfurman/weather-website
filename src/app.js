@@ -30,7 +30,7 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about',{
-        title: 'About Me',
+        title: 'About',
         name: 'Asa Furman'
     })
 })
@@ -39,7 +39,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Page',
         name: 'Asa Furman',
-        helpMessage: 'Here is some helpful text explaining how the weather app is supposed to work'
+        helpMessage: 'Provide a location and get'
     })
 })
 
@@ -65,18 +65,6 @@ app.get('/weather', (req, res) => {
             address: req.query.address
         })
         })  
-    })
-})
-
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'You must provide a search term'
-        })
-    }
-    console.log(req.query.search)
-    res.send({
-        products: []
     })
 })
 
